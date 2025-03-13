@@ -10,7 +10,7 @@ pub(crate) fn target() -> Target {
             description: Some("Succinct's zero-knowledge Virtual Machine (RV32IM ISA)".into()),
             tier: Some(3),
             host_tools: Some(false),
-            std: None,
+            std: Some(true),
         },
         pointer_width: 32,
         arch: "riscv32".into(),
