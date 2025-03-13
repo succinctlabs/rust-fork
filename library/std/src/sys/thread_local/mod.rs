@@ -29,6 +29,7 @@ cfg_if::cfg_if! {
         target_os = "uefi",
         target_os = "zkvm",
         target_os = "trusty",
+        target_os = "succinct-zkvm",
     ))] {
         mod statik;
         pub use statik::{EagerStorage, LazyStorage, thread_local_inner};
@@ -93,6 +94,7 @@ pub(crate) mod guard {
             target_os = "uefi",
             target_os = "zkvm",
             target_os = "trusty",
+            target_os = "succinct-zkvm",
         ))] {
             pub(crate) fn enable() {
                 // FIXME: Right now there is no concept of "thread exit" on
